@@ -1,0 +1,13 @@
+services:
+  frontend:
+    build:
+      context: ./frontend
+      dockerfile: Dockerfile
+    volumes:
+      - ./frontend:/usr/src/frontend
+      - /usr/src/frontend/node_modules
+    ports:
+      - "5173:5173"
+    environment:
+      - NODE_ENV=development
+    tty: true
