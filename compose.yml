@@ -11,3 +11,39 @@ services:
     environment:
       - NODE_ENV=development
     tty: true
+
+  backend:
+    container_name: backend
+    image: node:20-alpine
+    volumes:
+      - ./backend:/usr/src/backend
+    ports:
+      - "3000:3000"
+    working_dir: /usr/src/backend
+    tty: true
+    environment:
+      DATABASE_URL: "postgresql://user:password@database:5432/histoire"
+    depends_on:
+      - database
+
+  database:
+    image: postgres:17-alpine
+    volumes:
+      - ./db/database:/var/lib/postgresql/data
+    ports:
+      - "5432:5432"
+    environment:
+      POSTGRES_USER: "user"
+      POSTGRES_PASSWORD: "password"
+      POSTGRES_DB: "histoire"
+    restart: unless-stopped
+
+  prismastudio:
+    image: timothyjmiller/prisma-studio
+    restart: unless-stopped
+    ports:
+      - 5555:5555
+    env_file:
+      - .env
+    depends_on:
+      - database
