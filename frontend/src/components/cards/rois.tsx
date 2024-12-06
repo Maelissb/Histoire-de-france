@@ -168,6 +168,25 @@ const Rois: React.FC = () => {
       deathDate: '24 septembre 768 à Saint-Denis, Royaume des Francs',
       description: "Pépin le Bref, fils de Charles Martel, est le premier roi carolingien des Francs, ayant déposé le dernier roi mérovingien, Childeric III, en 751. Son règne est marqué par des réformes administratives et religieuses importantes, ainsi que par des victoires militaires, notamment contre les Lombards en Italie, ce qui renforça la position du pape. Pépin établit les bases de la dynastie carolingienne, qui culminera avec le règne de son fils, Charlemagne. Sa politique de soutien à l'Église et ses victoires militaires consolidèrent l'autorité royale et lancèrent un nouvel élan pour le royaume des Francs.",
     },
+    {
+      Image: 'https://upload.wikimedia.org/wikipedia/commons/thumb/d/d9/Amiel_-_Pepin_the_Short.jpg/220px-Amiel_-_Pepin_the_Short.jpg',
+      name: 'Pepin le Bref (751 - 768)',
+      dynasty: "Carolingiens",
+      birthDate: 'vers 715 à Jupille, Royaume des Francs',
+      deathDate: '24 septembre 768 à Saint-Denis, Royaume des Francs',
+      description: "Pépin le Bref, fils de Charles Martel, est le premier roi carolingien des Francs, ayant déposé le dernier roi mérovingien, Childeric III, en 751. Son règne est marqué par des réformes administratives et religieuses importantes, ainsi que par des victoires militaires, notamment contre les Lombards en Italie, ce qui renforça la position du pape. Pépin établit les bases de la dynastie carolingienne, qui culminera avec le règne de son fils, Charlemagne. Sa politique de soutien à l'Église et ses victoires militaires consolidèrent l'autorité royale et lancèrent un nouvel élan pour le royaume des Francs.",
+    },
+    {
+      Image: 'https://upload.wikimedia.org/wikipedia/commons/thumb/d/d9/Amiel_-_Pepin_the_Short.jpg/220px-Amiel_-_Pepin_the_Short.jpg',
+      name: 'Pepin le Bref (751 - 768)',
+      dynasty: "Carolingiens",
+      birthDate: 'vers 715 à Jupille, Royaume des Francs',
+      deathDate: '24 septembre 768 à Saint-Denis, Royaume des Francs',
+      description: "Pépin le Bref, fils de Charles Martel, est le premier roi carolingien des Francs, ayant déposé le dernier roi mérovingien, Childeric III, en 751. Son règne est marqué par des réformes administratives et religieuses importantes, ainsi que par des victoires militaires, notamment contre les Lombards en Italie, ce qui renforça la position du pape. Pépin établit les bases de la dynastie carolingienne, qui culminera avec le règne de son fils, Charlemagne. Sa politique de soutien à l'Église et ses victoires militaires consolidèrent l'autorité royale et lancèrent un nouvel élan pour le royaume des Francs.",
+    },
+
+    
+    
     
     
 

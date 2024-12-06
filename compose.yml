@@ -1,5 +1,6 @@
 services:
   frontend:
+    container_name: frontend
     build:
       context: ./frontend
       dockerfile: Dockerfile
@@ -43,7 +44,7 @@ services:
     restart: unless-stopped
     ports:
       - 5555:5555
-    env_file:
-      - .env
+    environment:
+      POSTGRES_URL: "postgresql://user:password@database:5432/histoire"
     depends_on:
       - database

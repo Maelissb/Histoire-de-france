@@ -9,8 +9,9 @@ const Menu: React.FC = () => {
       <nav className="menu">
           <ul className="menu-list">
            <li><Link to="/">Accueil</Link></li>
-           <li><Link to="/Rois">Rois</Link></li>
+           <li><Link to="/Rois">King</Link></li>
           <li><Link to="/france">France</Link></li>
+          <li><Link to="/roistest">test</Link></li>
           </ul>
       </nav>
     </header>
