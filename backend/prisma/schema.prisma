@@ -17,7 +17,7 @@ model Roi {
   id          Int      @id @default(autoincrement())
   image       String?
   name        String
-  dynastie    String
+  dynastie    String   @default("Unknown")
   birthDate   String
   deathDate   String
   description String

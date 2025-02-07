@@ -5,19 +5,28 @@ import '../../styles/_rois.sass'
 
 const Rois: React.FC = () => {
   const [selectedDynasty, setSelectedDynasty] = useState<string>('');
-  
+  const [showImportant] = useState<boolean>(false);
   // Définition des cartes
   const cards = [
     {
+      Image: 'https://c8.alamy.com/compfr/fwp6td/childeric-i-ou-childericus-childerich-c-440-481-482-un-roi-merovingien-des-francs-saliens-fwp6td.jpg',
+      name: 'Childéric Ier (457 - 481)',
+      dynasty: "Mérovingiens",
+      birthDate: 'vers 437',
+      deathDate: 'vers 481',
+      description: 'Père de Clovis Ier, il est le premier roi des Francs saliens. Son règne marque le début de la dynastie mérovingienne..',
+    },
+
+    {
       Image: 'https://www.histoiredefrance.net/wp-content/uploads/2020/03/Clovis-1.jpg',
       name: 'Clovis Ier (481–511)',
-      dynasty: "Mérovingiens",
+      dynasty: "Mérovingien, A Retenirs",
       birthDate: '27 février 466 à Tournai, Royaume des Francs.',
       deathDate: '511 à Paris, Royaume des Francs.',
       description: 'Clovis Ier est le premier roi des Francs à unifier une grande partie de la Gaule. Il est connu pour avoir adopté le christianisme...',
     },
     {
-      Image: 'https://idata.over-blog.com/4/31/14/06/childebert_I.gif',
+      Image: 'https://www.histoireeurope.fr/ImgC/Clotaire%20Ier_2.PNG',
       name: 'Clodomir Ier (511 - 524)',
       dynasty: "Mérovingiens",
       birthDate: 'Vers 495, à Soissons, Royaume des Francs.',
@@ -129,7 +138,7 @@ const Rois: React.FC = () => {
       description: "Childebert III, surnommé Childebert le Juste, fut roi mérovingien de Neustrie et de Bourgogne. Bien que son règne fût officiellement long, il exerça peu d'autorité réelle, le pouvoir étant entre les mains des maires du palais, notamment Pépin de Herstal. Son règne est caractéristique de l'ère des rois fainéants, où les souverains mérovingiens jouaient un rôle symbolique tandis que les Carolingiens renforçaient leur influence.",
     },
     {
-      Image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQntiL3AulFHXbKvohgVCXJ55RaFdokwHLF2g&s',
+      Image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS7CyoB7EFTvMOttAGbUH7YkShR9Jf4EsBqhA&s',
       name: 'Dagobert III (711 - 715)',
       dynasty: "Mérovingiens",
       birthDate: 'vers 699, Royaume des Francs',
@@ -160,6 +169,8 @@ const Rois: React.FC = () => {
       deathDate: 'vers 755 à Metz, Royaume des Francs',
       description: "Thierry IV fut un roi mérovingien d'Austrasie, qui régna sous la tutelle des maires du palais, principalement Charles Martel. Son règne, comme celui de ses prédécesseurs, fut marqué par une faible autorité royale, le véritable pouvoir étant détenu par les maires du palais. Thierry IV fut l'un des derniers rois de la dynastie mérovingienne avant la montée en puissance des Carolingiens, notamment avec Charles Martel, qui centralisa progressivement le pouvoir.",
     },
+
+    // ----Carolingiens-----
     {
       Image: 'https://upload.wikimedia.org/wikipedia/commons/thumb/d/d9/Amiel_-_Pepin_the_Short.jpg/220px-Amiel_-_Pepin_the_Short.jpg',
       name: 'Pepin le Bref (751 - 768)',
@@ -169,21 +180,176 @@ const Rois: React.FC = () => {
       description: "Pépin le Bref, fils de Charles Martel, est le premier roi carolingien des Francs, ayant déposé le dernier roi mérovingien, Childeric III, en 751. Son règne est marqué par des réformes administratives et religieuses importantes, ainsi que par des victoires militaires, notamment contre les Lombards en Italie, ce qui renforça la position du pape. Pépin établit les bases de la dynastie carolingienne, qui culminera avec le règne de son fils, Charlemagne. Sa politique de soutien à l'Église et ses victoires militaires consolidèrent l'autorité royale et lancèrent un nouvel élan pour le royaume des Francs.",
     },
     {
-      Image: 'https://upload.wikimedia.org/wikipedia/commons/thumb/d/d9/Amiel_-_Pepin_the_Short.jpg/220px-Amiel_-_Pepin_the_Short.jpg',
-      name: 'Pepin le Bref (751 - 768)',
-      dynasty: "Carolingiens",
-      birthDate: 'vers 715 à Jupille, Royaume des Francs',
-      deathDate: '24 septembre 768 à Saint-Denis, Royaume des Francs',
-      description: "Pépin le Bref, fils de Charles Martel, est le premier roi carolingien des Francs, ayant déposé le dernier roi mérovingien, Childeric III, en 751. Son règne est marqué par des réformes administratives et religieuses importantes, ainsi que par des victoires militaires, notamment contre les Lombards en Italie, ce qui renforça la position du pape. Pépin établit les bases de la dynastie carolingienne, qui culminera avec le règne de son fils, Charlemagne. Sa politique de soutien à l'Église et ses victoires militaires consolidèrent l'autorité royale et lancèrent un nouvel élan pour le royaume des Francs.",
+      Image: 'https://histoire-image.org/sites/default/files/2021-11/charlemagne-empereur-occident.jpg',
+      name: 'Charlemagne (768 - 814)',
+      dynasty: "Carolingiens, A Retenirs",
+      birthDate: '2 avril 742',
+      deathDate: '28 janvier 814',
+      description: "Fils de Pépin le Bref, il agrandit considérablement le royaume franc, devient empereur d’Occident en 800 et instaure un système administratif et éducatif avancé.",
     },
     {
-      Image: 'https://upload.wikimedia.org/wikipedia/commons/thumb/d/d9/Amiel_-_Pepin_the_Short.jpg/220px-Amiel_-_Pepin_the_Short.jpg',
-      name: 'Pepin le Bref (751 - 768)',
+      Image: 'https://upload.wikimedia.org/wikipedia/commons/thumb/1/1e/Louis_le_Pieux.png/490px-Louis_le_Pieux.png',
+      name: 'Louis le Pieux (814 - 840)',
       dynasty: "Carolingiens",
-      birthDate: 'vers 715 à Jupille, Royaume des Francs',
-      deathDate: '24 septembre 768 à Saint-Denis, Royaume des Francs',
-      description: "Pépin le Bref, fils de Charles Martel, est le premier roi carolingien des Francs, ayant déposé le dernier roi mérovingien, Childeric III, en 751. Son règne est marqué par des réformes administratives et religieuses importantes, ainsi que par des victoires militaires, notamment contre les Lombards en Italie, ce qui renforça la position du pape. Pépin établit les bases de la dynastie carolingienne, qui culminera avec le règne de son fils, Charlemagne. Sa politique de soutien à l'Église et ses victoires militaires consolidèrent l'autorité royale et lancèrent un nouvel élan pour le royaume des Francs.",
+      birthDate: 'vers avril 778',
+      deathDate: '20 juin 840',
+      description: "Fils de Charlemagne, il tente de maintenir l’unité de l’empire mais doit faire face aux révoltes de ses fils, ce qui conduit au partage de l’empire entre eux en 843 (Traité de Verdun).",
     },
+    {
+      Image: 'https://cassius.e-monsite.com/medias/images/01-charles-ii-le-chauve.jpg?fx=r_1200_800',
+      name: ' Charles II le Chauve (843 - 877)',
+      dynasty: "Carolingiens",
+      birthDate: '13 juin 823',
+      deathDate: '6 octobre 877',
+      description: "Fils de Louis le Pieux, il reçoit la Francie occidentale lors du partage de Verdun et devient roi de France. Il est aussi couronné empereur en 875.",
+    },
+    {
+      Image: 'https://www.histoiredefrance.net/wp-content/uploads/2020/03/Louis-II-le-begue.jpg',
+      name: ' Louis II le Bègue (877 - 879)',
+      dynasty: "Carolingiens",
+      birthDate: '1er novembre 846',
+      deathDate: '10 avril 879',
+      description: "Fils de Charles le Chauve, son règne est bref et marqué par des conflits avec les nobles et les Normands.",
+    },
+    {
+      Image: 'https://cassius.e-monsite.com/medias/images/louis-iii-et-carloman-ii.jpg',
+      name: 'Louis III (879 - 882) et Carloman II (879 - 884)',
+      dynasty: "Carolingiens",
+      birthDate: 'Louis III est né vers 863 et Carloman II vers 866',
+      deathDate: 'Louis III est mort le 5 août 882 et Carloman II le 12 décembre 884 ',
+      description: "Ils règnent conjointement après la mort de leur père, Louis II le Bègue. Louis III meurt accidentellement en 882, laissant Carloman seul au pouvoir.",
+    },
+    {
+      Image: 'https://cassius.e-monsite.com/medias/images/00-charles-iii-le-gros.jpg',
+      name: 'Charles III le Gros (884-888)',
+      dynasty: "Carolingiens",
+      birthDate: 'vers 839',
+      deathDate: '13 janvier 888 ',
+      description: "Empereur d’Occident et roi de Francie occidentale, il est déposé en 888 pour son incapacité à défendre le royaume contre les invasions normandes.",
+    },
+    {
+      Image: 'https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcSadcjN9Zfw94Q-VIK5U2HG64EToyKPhdveJW_ueF1gpy9yScpQkpZju5GwbN96dGN3KUQsD4dp1qlRP-yAsjM0qA',
+      name: 'Eudes (888 - 898) - Capétien, mais interlude important',
+      dynasty: "Carolingiens",
+      birthDate: 'vers 852',
+      deathDate: '3 janvier 898',
+      description: "Bien qu’Eudes soit un roi capétien, il est élu roi après la déposition de Charles le Gros pour repousser les Normands.",
+    },
+    {
+      Image: 'https://cassius.e-monsite.com/medias/images/00-charles-iii-le-simple.jpg',
+      name: 'Charles III le Simple (898 - 922)',
+      dynasty: "Carolingiens",
+      birthDate: '17 septembre 879',
+      deathDate: '7 octobre 929',
+      description: "Fils de Louis II le Bègue, il récupère la couronne après Eudes. Il accorde la Normandie aux Vikings en 911 (Traité de Saint-Clair-sur-Epte).",
+    },
+    {
+      Image: 'https://www.histoireeurope.fr/ImgH/Henri%20Ier%20Beauclerc.PNG',
+      name: 'Robert Ier (922 - 923) - Capétien',
+      dynasty: "Carolingiens",
+      birthDate: 'né vers 860',
+      deathDate: 'le 15 juin 923 à Soissons',
+      description: "Roi capétien, il renverse Charles le Simple.",
+    },
+    {
+      Image: 'https://cassius.e-monsite.com/medias/images/00-raoul-de-bourgogne.jpg',
+      name: 'Raoul de Bourgogne (923 - 936) - Non carolingien',
+      dynasty: "Carolingiens",
+      birthDate: 'vers 890',
+      deathDate: '936 à Auxerre',
+      description: "Raoul n’est pas un carolingien, mais il règne après Robert Ier.",
+    },
+    {
+      Image: 'https://www.histoiredefrance.net/wp-content/uploads/2020/03/Louis-IV-outremer-1.jpg',
+      name: 'Louis IV d’Outremer (936 - 954)',
+      dynasty: "Carolingiens",
+      birthDate: '10 septembre 920',
+      deathDate: '10 septembre 954',
+      description: "Fils de Charles le Simple, il revient de son exil en Angleterre pour reprendre la couronne, mais il lutte contre les grands féodaux.",
+    },
+    {
+      Image: 'https://cassius.e-monsite.com/medias/images/00-lothaire-1.jpg',
+      name: 'Lothaire (954 - 986)',
+      dynasty: "Carolingiens",
+      birthDate: 'vers 941',
+      deathDate: '2 mars 986',
+      description: "Fils de Louis IV, il tente de restaurer l’autorité royale face aux ducs puissants, notamment Hugues Capet.",
+    },
+    {
+      Image: 'https://upload.wikimedia.org/wikipedia/commons/thumb/9/92/Amiel_-_Louis_V_of_France.jpg/220px-Amiel_-_Louis_V_of_France.jpg',
+      name: 'Louis V le Fainéant (986 - 987)',
+      dynasty: "Carolingiens",
+      birthDate: 'vers 967',
+      deathDate: '21 mai 987',
+      description: "Dernier roi carolingien, son règne est marqué par une perte d’autorité au profit d’Hugues Capet, qui fonde la dynastie capétienne.",
+    },
+
+    // -----Capetien-----
+    {
+      Image: 'https://upload.wikimedia.org/wikipedia/commons/thumb/f/f0/Hugues_capet.jpg/170px-Hugues_capet.jpg',
+      name: 'Hugues Capet (987 - 996)',
+      dynasty: "Capétiens,A Retenirs",
+      birthDate: 'vers 940',
+      deathDate: '24 octobre 996',
+      description: "Fondateur de la dynastie capétienne. Il établit la transmission héréditaire du pouvoir.",
+    },
+    {
+      Image: 'https://upload.wikimedia.org/wikipedia/commons/thumb/f/f0/Hugues_capet.jpg/170px-Hugues_capet.jpg',
+      name: 'Robert II le Pieux (996 - 1031)',
+      dynasty: "Capétiens",
+      birthDate: 'vers 972',
+      deathDate: '20 juillet 1031',
+      description: "Fils de Hugues Capet, il renforce l’autorité royale et est connu pour sa piété.",
+    },
+    {
+      Image: 'https://images.cdn-files-a.com/uploads/2339408/800_5d42d8e18cd55.jpg',
+      name: 'Henri Ier (1031 - 1060)',
+      dynasty: "Capétiens",
+      birthDate: '4 mai 1008',
+      deathDate: '4 août 1060',
+      description: "Continue la consolidation du pouvoir royal face aux grands seigneurs.",
+    },
+    {
+      Image: 'https://upload.wikimedia.org/wikipedia/commons/7/7e/Saint-%C3%88vre_-_Philip_I_of_France.jpg',
+      name: 'Philippe Ier (1060 - 1108)',
+      dynasty: "Capétiens",
+      birthDate: '23 mai 1052',
+      deathDate: '29 juillet 1108',
+      description: "Règne long, marqué par la montée en puissance des ducs de Normandie.",
+    },
+    {
+      Image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSU-9HtuaekTEUoXg4iObm_M7EsFI2QG-r1ew&s',
+      name: 'Louis VI le Gros (1108 - 1137)',
+      dynasty: "Capétiens",
+      birthDate: '1er décembre 1081',
+      deathDate: '1er août 1137',
+      description: "Renforce l’autorité royale et combat les seigneurs rebelles.",
+    },
+    {
+      Image: 'https://upload.wikimedia.org/wikipedia/commons/3/37/Decaisne_-_Louis_VII_of_France.jpg',
+      name: 'Louis VII le Jeune (1137 - 1180)',
+      dynasty: "Capétiens",
+      birthDate: 'vers 1120',
+      deathDate: '18 septembre 1180',
+      description: "Participe à la deuxième croisade. Son mariage avec Aliénor d'Aquitaine influence l’histoire de l’Angleterre.",
+    },
+    {
+      Image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTologkAzu91pQMEZMcum3QoMsVOtmN7fE6HA&s',
+      name: 'Philippe II Auguste (1180 - 1223)',
+      dynasty: "Capétiens, A Retenirs",
+      birthDate: '21 août 1165',
+      deathDate: '14 juillet 1223',
+      description: "",
+    },
+
+
+
+
+
+
+
+
+    
 
     
     
@@ -192,10 +358,12 @@ const Rois: React.FC = () => {
 
   ];
 
-  // Filtrage des rois selon la dynastie sélectionnée
-  const filteredRois = selectedDynasty
-    ? cards.filter((card) => card.dynasty === selectedDynasty)
-    : cards;
+  // Filtrage des rois selon la dynastie sélectionnée et s'ils sont "importants"
+  const filteredRois = cards.filter((card) => {
+    const matchDynasty = selectedDynasty ? card.dynasty.includes(selectedDynasty) : true;
+    const matchImportant = showImportant ? card.dynasty.includes("A Retenir") : true;
+    return matchDynasty && matchImportant;
+  });
 
   // Fonction pour gérer le changement de filtre
   const handleFilter = (dynasty: string) => {

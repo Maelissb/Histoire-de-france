@@ -14,6 +14,7 @@ const FilterButtons: React.FC<FilterButtonsProps> = ({ onFilter }) => {
       <button onClick={() => onFilter('Capétiens')}>Capétiens</button> 
       <button onClick={() => onFilter('Valois')}>Valois</button> 
       <button onClick={() => onFilter('Bourbons')}>Bourbons</button> 
+      <button onClick={() => onFilter('A Retenir')}>À Retenir</button> 
     </div>
   );
 };
