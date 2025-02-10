@@ -2,7 +2,7 @@ interface Roi {
     id: number; // L'ID sera généré par la base de données
     image?: string;
     name: string;
-    dynastie: string;
+    dynasty: string;
     birthDate: string;
     deathDate: string | null;
     description: string;

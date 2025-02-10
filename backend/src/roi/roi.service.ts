@@ -11,7 +11,7 @@ export class RoiService {
     const data: Prisma.RoiCreateInput = {
       image: roiData.image,
       name: roiData.name,
-      dynasty: roiData.dynastie,
+      dynastie: roiData.dynastie,
       birthDate: roiData.birthDate,
       deathDate: roiData.deathDate,
       description: roiData.description,

@@ -1,20 +1,19 @@
 import React from 'react';
-import '../styles/_filter.sass'
+import '../styles/_filter.sass';
 
 // Définition du type pour les props
 interface FilterButtonsProps {
-  onFilter: (dynasty: string) => void;  // Typage explicite de la fonction
+  onDynastyFilter: (dynasty: string) => void; // Fonction pour filtrer par dynastie
 }
 
-const FilterButtons: React.FC<FilterButtonsProps> = ({ onFilter }) => {
+const FilterButtons: React.FC<FilterButtonsProps> = ({ onDynastyFilter }) => {
   return (
     <div className='button'>
-      <button onClick={() => onFilter('Mérovingiens')}>Mérovingiens</button>
-      <button onClick={() => onFilter('Carolingiens')}>Carolingiens</button>
-      <button onClick={() => onFilter('Capétiens')}>Capétiens</button> 
-      <button onClick={() => onFilter('Valois')}>Valois</button> 
-      <button onClick={() => onFilter('Bourbons')}>Bourbons</button> 
-      <button onClick={() => onFilter('A Retenir')}>À Retenir</button> 
+      <button onClick={() => onDynastyFilter('Mérovingiens')}>Mérovingiens</button>
+      <button onClick={() => onDynastyFilter('Carolingiens')}>Carolingiens</button>
+      <button onClick={() => onDynastyFilter('Capétiens')}>Capétiens</button>
+      <button onClick={() => onDynastyFilter('Valois')}>Valois</button>
+      <button onClick={() => onDynastyFilter('Bourbons')}>Bourbons</button>
     </div>
   );
 };

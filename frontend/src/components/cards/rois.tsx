@@ -5,7 +5,7 @@ import '../../styles/_rois.sass'
 
 const Rois: React.FC = () => {
   const [selectedDynasty, setSelectedDynasty] = useState<string>('');
-  const [showImportant] = useState<boolean>(false);
+  
   // Définition des cartes
   const cards = [
     {
@@ -16,11 +16,10 @@ const Rois: React.FC = () => {
       deathDate: 'vers 481',
       description: 'Père de Clovis Ier, il est le premier roi des Francs saliens. Son règne marque le début de la dynastie mérovingienne..',
     },
-
     {
       Image: 'https://www.histoiredefrance.net/wp-content/uploads/2020/03/Clovis-1.jpg',
-      name: 'Clovis Ier (481–511)',
-      dynasty: "Mérovingien, A Retenirs",
+      name: 'Clovis Ier (481 – 511)',
+      dynasty: "Mérovingiens",
       birthDate: '27 février 466 à Tournai, Royaume des Francs.',
       deathDate: '511 à Paris, Royaume des Francs.',
       description: 'Clovis Ier est le premier roi des Francs à unifier une grande partie de la Gaule. Il est connu pour avoir adopté le christianisme...',
@@ -182,7 +181,7 @@ const Rois: React.FC = () => {
     {
       Image: 'https://histoire-image.org/sites/default/files/2021-11/charlemagne-empereur-occident.jpg',
       name: 'Charlemagne (768 - 814)',
-      dynasty: "Carolingiens, A Retenirs",
+      dynasty: "Carolingiens",
       birthDate: '2 avril 742',
       deathDate: '28 janvier 814',
       description: "Fils de Pépin le Bref, il agrandit considérablement le royaume franc, devient empereur d’Occident en 800 et instaure un système administratif et éducatif avancé.",
@@ -284,17 +283,17 @@ const Rois: React.FC = () => {
       description: "Dernier roi carolingien, son règne est marqué par une perte d’autorité au profit d’Hugues Capet, qui fonde la dynastie capétienne.",
     },
 
-    // -----Capetien-----
+    // -----Capetien--------------------------------------------
     {
       Image: 'https://upload.wikimedia.org/wikipedia/commons/thumb/f/f0/Hugues_capet.jpg/170px-Hugues_capet.jpg',
       name: 'Hugues Capet (987 - 996)',
-      dynasty: "Capétiens,A Retenirs",
+      dynasty: "Capétiens",
       birthDate: 'vers 940',
       deathDate: '24 octobre 996',
       description: "Fondateur de la dynastie capétienne. Il établit la transmission héréditaire du pouvoir.",
     },
     {
-      Image: 'https://upload.wikimedia.org/wikipedia/commons/thumb/f/f0/Hugues_capet.jpg/170px-Hugues_capet.jpg',
+      Image: 'https://upload.wikimedia.org/wikipedia/commons/a/a4/Blondel_-_Robert_II_of_France.jpg',
       name: 'Robert II le Pieux (996 - 1031)',
       dynasty: "Capétiens",
       birthDate: 'vers 972',
@@ -302,7 +301,7 @@ const Rois: React.FC = () => {
       description: "Fils de Hugues Capet, il renforce l’autorité royale et est connu pour sa piété.",
     },
     {
-      Image: 'https://images.cdn-files-a.com/uploads/2339408/800_5d42d8e18cd55.jpg',
+      Image: 'https://upload.wikimedia.org/wikipedia/commons/f/fc/Blondel_-_Henry_I_of_France.jpg',
       name: 'Henri Ier (1031 - 1060)',
       dynasty: "Capétiens",
       birthDate: '4 mai 1008',
@@ -336,59 +335,275 @@ const Rois: React.FC = () => {
     {
       Image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTologkAzu91pQMEZMcum3QoMsVOtmN7fE6HA&s',
       name: 'Philippe II Auguste (1180 - 1223)',
-      dynasty: "Capétiens, A Retenirs",
+      dynasty: "Capétiens",
       birthDate: '21 août 1165',
       deathDate: '14 juillet 1223',
-      description: "",
+      description: "Premier roi à porter le titre de \"Roi de France\". Agrandit le territoire et bat les Anglais à Bouvines (1214).",
+    },
+    {
+      Image: 'https://upload.wikimedia.org/wikipedia/commons/e/ef/Lehmann_-_Louis_VIII_of_France.jpg',
+      name: 'Louis VIII le Lion (1223 - 1226)',
+      dynasty: "Capétiens, ",
+      birthDate: '5 septembre 1187',
+      deathDate: '8 novembre 1226',
+      description: "Conquiert une partie du sud de la France contre les Cathares.",
+    },
+    {
+      Image: 'https://upload.wikimedia.org/wikipedia/commons/e/e8/Decreuse_-_Louis_IX_of_France.jpg',
+      name: 'Louis IX (Saint Louis) (1226 - 1270)',
+      dynasty: "Capétiens",
+      birthDate: '25 avril 1214',
+      deathDate: '25 août 1270	',
+      description: "Canonisé après sa mort. Il mène deux croisades et instaure une justice royale forte.",
+    },
+    {
+      Image: 'https://www.alex-bernardini.fr/histoire/images/philippe-III-le-Hardi_Vig.jpg',
+      name: 'Philippe III le Hardi (1270 - 1285)',
+      dynasty: "Capétiens",
+      birthDate: '1er mai 1245',
+      deathDate: '5 octobre 1285	',
+      description: "Continue l’expansion du royaume et combat en Aragon..",
+    },
+    {
+      Image: 'https://www.meisterdrucke.fr/kunstwerke/1260px/Anonymous_Anonymous_-_Portrait_of_Philip_IV_the_Bel_%281268_-_1314%29_King_of_France_Anonymous_painting_of_-_%28MeisterDrucke-1000188%29.jpg',
+      name: 'Philippe IV le Bel (1285 - 1314)',
+      dynasty: "Capétiens",
+      birthDate: 'vers 1268',
+      deathDate: '29 novembre 1314	',
+      description: "Connu pour son affrontement avec le pape et la suppression des Templiers.",
+    },
+    {
+      Image: 'https://www.herodote.net/_image/louis10-hutin.jpg',
+      name: 'Louis X le Hutin (1314 - 1316)',
+      dynasty: "Capétiens",
+      birthDate: '4 octobre 1289',
+      deathDate: '5 juin 1316	',
+      description: "Son règne est marqué par des tensions internes. Mort prématurée sans héritier direct.",
+    },
+    {
+      Image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRY0nKPaGz0WRTKpiuuSCKrqPteoDlfFUY3Ag&s',
+      name: 'Jean Ier le Posthume (1316)',
+      dynasty: "Capétiens",
+      birthDate: '15 novembre 1316',
+      deathDate: '20 novembre 1316',
+      description: "Roi dès sa naissance, il meurt après 5 jours de règne.",
+    },
+    {
+      Image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR5DTLsX4aFBXu7BUeZrO31WufKa1GHOl-GBw&s',
+      name: 'Philippe V le Long (1316 - 1322)',
+      dynasty: "Capétiens",
+      birthDate: 'vers 1293',
+      deathDate: '3 janvier 1322',
+      description: "Fait adopter la loi salique pour empêcher les femmes de régner..",
+    },
+    {
+      Image: 'https://templiers.org/assets/images/roi-france-charles-IV-400x500.png',
+      name: 'Charles IV le Bel (1322 - 1328)',
+      dynasty: "Capétiens",
+      birthDate: 'vers 1294',
+      deathDate: '1er février 1328',
+      description: "Dernier roi capétien direct. Sa mort sans héritier déclenche la guerre de Cent Ans.",
     },
 
+//-------Valois--------------
+{
+  Image: 'https://templiers.org/assets/images/roi-france-charles-IV-400x500.png',
+  name: 'Philippe VI de Valois (1328 - 1350)',
+  dynasty: "Valois",
+  birthDate: 'vers 1293',
+  deathDate: '22 août 1350',
+  description: "Premier roi de la dynastie des Valois. Il hérite du trône après la mort de Charles IV le Bel. Son règne est marqué par le début de la guerre de Cent Ans contre l'Angleterre.",
+},
+{
+  Image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRl-ZRAIdQqwN7ljASMyrH6QYFJrZKYpnH-BA&s',
+  name: 'Jean II le Bon (1350 - 1364)',
+  dynasty: "Valois",
+  birthDate: '16 avril 1319',
+  deathDate: '8 avril 1364',
+  description: "Capturé par les Anglais lors de la bataille de Poitiers (1356), il meurt en captivité.",
+},
+{
+  Image: 'https://touslesroisdefrance.fr/wp-content/uploads/TLRDF-CHARLESV.jpg',
+  name: 'Charles V le Sage (1364 - 1380)',
+  dynasty: "Valois",
+  birthDate: '21 janvier 1338',
+  deathDate: '16 septembre 1380',
+  description: "Consolide le pouvoir royal, met en place une administration efficace et mène des négociations avec l'Angleterre.",
+},
+{
+  Image: 'https://toysondor.blog/wp-content/uploads/2017/03/charles-vi-tableau.jpg',
+  name: 'Charles VI le Fou (1380 - 1422)',
+  dynasty: "Valois",
+  birthDate: '3 décembre 1368',
+  deathDate: '21 octobre 1422',
+  description: "Son règne est marqué par la folie de Charles VI, créant des divisions internes et des luttes de pouvoir.",
+},
+{
+  Image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQiPHcDEHVQiSaw3GNe-G_mUrzdQdEqgvSbDw&s',
+  name: 'Charles VII le Victorieux (1422 - 1461)',
+  dynasty: "Valois",
+  birthDate: '22 février 1403',
+  deathDate: '22 juillet 1461',
+  description: "Reprend la guerre de Cent Ans en main après les désastres de la régence, il est soutenu par Jeanne d'Arc.",
+},
+{
+  Image: 'https://www.alex-bernardini.fr/histoire/images/Louis-XI.jpg',
+  name: 'Louis XI le Prudent (1461 - 1483)',
+  dynasty: "Valois",
+  birthDate: '3 juillet 1423',
+  deathDate: '30 août 1483',
+  description: "Instaurateur de l’absolutisme royal, il combat les grandes familles nobles pour renforcer le pouvoir royal.",
+},
+{
+  Image: 'https://kamelott.fr/wp-content/uploads/2020/04/Charles_VIII_Roi_de_France_1483-1498.jpg',
+  name: 'Charles VIII l \'Affable (1483 - 1498)',
+  dynasty: "Valois",
+  birthDate: '30 juin 1470	',
+  deathDate: '7 avril 1498',
+  description: "Connu pour sa tentative d'invasion de l'Italie, il meurt prématurément après un accident.",
+},
+{
+  Image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTcgWsGdwQiYEnir_ssBeZPEiht_uZQC44EaQ&s',
+  name: 'Louis XII le Père du Peuple (1498 - 1515)',
+  dynasty: "Valois",
+  birthDate: '27 juin 1462	',
+  deathDate: '1er janvier 1515',
+  description: "Son règne marque la consolidation du pouvoir royal et une série de réformes.",
+},
+{
+  Image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRrGfWCnth1-OzO9iXo9w4qOwdJmSJv6lN03w&s',
+  name: 'François Ier (1515 - 1547)',
+  dynasty: "Valois",
+  birthDate: '12 septembre 1494',
+  deathDate: '31 mars 1547',
+  description: "L'un des rois les plus célèbres de la Renaissance, il mène une guerre contre Charles-Quint et favorise les arts.",
+},
+{
+  Image: 'https://upload.wikimedia.org/wikipedia/commons/thumb/5/5d/Henry_II_of_France..jpg/800px-Henry_II_of_France..jpg',
+  name: 'Henri II (1547 - 1559)',
+  dynasty: "Valois",
+  birthDate: '31 mars 1519',
+  deathDate: '10 juillet 1559',
+  description: "Son règne est marqué par une guerre contre l'Espagne et une politique de soutien aux arts.",
+},
+{
+  Image: 'https://storage.canalblog.com/31/69/291893/129276578.jpg',
+  name: 'François II (1559 - 1560)',
+  dynasty: "Valois",
+  birthDate: '19 janvier 1544',
+  deathDate: '5 décembre 1560',
+  description: "Son règne est extrêmement court en raison de sa mort prématurée.",
+},
+{
+  Image: 'https://www.alex-bernardini.fr/histoire/images/charles-IX.jpg',
+  name: 'Charles IX (1560 - 1574)',
+  dynasty: "Valois",
+  birthDate: '27 juin 1550',
+  deathDate: '30 mai 1574',
+  description: "Son règne est marqué par les guerres de religion et le massacre de la Saint-Barthélemy.",
+},
+{
+  Image: 'https://www.histoire-pour-tous.fr/images/articles/dossiers/biographies/henriIII-jeune-louvre.jpg',
+  name: 'Henri III (1574 - 1589)',
+  dynasty: "Valois",
+  birthDate: '19 septembre 1551',
+  deathDate: '2 août 1589',
+  description: "Dernier roi Valois, son règne est marqué par les guerres de religion et il meurt assassiné par un moine.",
+},
 
-
-
-
-
-
-
-    
-
-    
-    
-    
-    
-
+//------ Bourbons-------
+{
+  Image: 'https://upload.wikimedia.org/wikipedia/commons/thumb/9/97/Henri_IV_portant_la_croix_du_Saint-Esprit_-_Frans_Pourbus_le_Jeune.jpg/640px-Henri_IV_portant_la_croix_du_Saint-Esprit_-_Frans_Pourbus_le_Jeune.jpg',
+  name: 'Henri IV (1589 - 1610)',
+  dynasty: "Bourbons",
+  birthDate: '13 décembre 1553',
+  deathDate: '14 mai 1610',
+  description: "Le premier roi Bourbon. Il met fin aux guerres de religion en France en se convertissant au catholicisme et en promulguant l'Édit de Nantes.",
+},
+{
+  Image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRKSqsJXcW0uK1M6HcXEmR2SnThq8ox0iZhkw&s',
+  name: 'Louis XIII (1610 - 1643)',
+  dynasty: "Bourbons",
+  birthDate: '27 septembre 1601',
+  deathDate: '14 mai 1643',
+  description: "Règne marqué par la consolidation du pouvoir royal et les guerres contre l'Espagne. Il s'entoure du cardinal Richelieu, son ministre.",
+},
+{
+  Image: 'https://musee-archeologienationale.fr/sites/archeonat/files/styles/thumbnail_w880/public/2021-08/louis_xiv_of_france_recadr%C3%A9_0.jpg?itok=wSJDeRkf',
+  name: 'Louis XIV (Le Roi Soleil) (1643 - 1715)',
+  dynasty: "Bourbons",
+  birthDate: '5 septembre 1638',
+  deathDate: '1er septembre 1715',
+  description: "Le plus long règne de l’histoire de France, marquée par l’absolutisme royal, la centralisation du pouvoir et les guerres pour la grandeur de la France.",
+},
+{
+  Image: 'https://upload.wikimedia.org/wikipedia/commons/thumb/a/a4/Louis15-1.jpg/1200px-Louis15-1.jpg',
+  name: 'Louis XV (1715 - 1774)',
+  dynasty: "Bourbons",
+  birthDate: '15 février 1710',
+  deathDate: '10 mai 1774',
+  description: "Son règne, marqué par la guerre de Sept Ans, voit le déclin de l’autorité royale et une croissance de l’opposition à la monarchie.",
+},
+{
+  Image: 'https://cdn.futura-sciences.com/sources/images/Louis%20XVI%20dauphin%20en%201769%20par%20Van%20Loo.jpg',
+  name: 'Louis XVI (1774 - 1792)',
+  dynasty: "Bourbons",
+  birthDate: '23 août 1754',
+  deathDate: '21 janvier 1793',
+  description: "Dernier roi de la monarchie absolue. Son règne se termine par la Révolution française, et il est exécuté par guillotine.",
+},
+{
+  Image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRGfhBE67jBuHnBdULBdbm8IV7-w3OMTqGq1A&s',
+  name: 'Louis XVIII (1814 - 1824)',
+  dynasty: "Bourbons",
+  birthDate: '17 novembre 1755',
+  deathDate: '16 septembre 1824',
+  description: "Frère de Louis XVI, il monte sur le trône après la chute de Napoléon Ier et rétablit la monarchie après la Révolution.",
+},
+{
+  Image: 'https://www.meisterdrucke.lu/kunstwerke/1260px/Lon_Cogniet_-_Portrait_of_Charles_X_%281757-1836%29_c1824-30_-_%28MeisterDrucke-37917%29.jpg',
+  name: 'Charles X (1824 - 1830)',
+  dynasty: "Bourbons",
+  birthDate: '9 octobre 1757',
+  deathDate: '6 novembre 1836',
+  description: "Dernier roi de la dynastie Bourbon. Son règne est marqué par des tentatives de retour à l’absolutisme, ce qui conduit à la Révolution de Juillet 1830 et à son abdication.",
+},
   ];
 
-  // Filtrage des rois selon la dynastie sélectionnée et s'ils sont "importants"
-  const filteredRois = cards.filter((card) => {
-    const matchDynasty = selectedDynasty ? card.dynasty.includes(selectedDynasty) : true;
-    const matchImportant = showImportant ? card.dynasty.includes("A Retenir") : true;
-    return matchDynasty && matchImportant;
-  });
 
-  // Fonction pour gérer le changement de filtre
-  const handleFilter = (dynasty: string) => {
-    setSelectedDynasty(dynasty);
-  };
+ // Filtrage des rois selon la dynastie
+ const filteredRois = cards.filter((card) => {
+  return selectedDynasty ? card.dynasty === selectedDynasty : true;
+});
 
-  return (
-    <div className="container-rois">
-      <div className="filter-container">
-        <FilterButtons onFilter={handleFilter} />
-      </div>
-      <div className='rois'>
+// Fonction pour gérer le changement de filtre de dynastie
+const handleDynastyFilter = (dynasty: string) => {
+  setSelectedDynasty(dynasty);
+};
+
+return (
+  <div className="container-rois">
+    <div className="filter-container">
+      <FilterButtons 
+        onDynastyFilter={handleDynastyFilter} 
+      />
+    </div>
+    <div className='rois'>
       {filteredRois.map((card, index) => (
         <Card
           key={index}
           image={card.Image}
           name={card.name}
+          dynasty={card.dynasty}
           birthDate={card.birthDate}
           deathDate={card.deathDate}
           description={card.description}
         />
       ))}
-      </div>
     </div>
-  );
+  </div>
+);
 };
+
 
 export default Rois;
