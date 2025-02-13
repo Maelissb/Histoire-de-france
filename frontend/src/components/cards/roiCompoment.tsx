@@ -4,7 +4,7 @@ import { fetchRois, createRoi } from "../../api/fetch"; // Import du service
 interface Roi {
   id: number;
   name: string;
-  dynastie: string;
+  dynasty: string;
   birthDate: string;
   deathDate: string | null;
   description: string;
@@ -16,7 +16,7 @@ const RoiComponent: React.FC = () => {
 
   const [newRoi, setNewRoi] = useState<Omit<Roi, 'id'>>({
     name: "",
-    dynastie: "",
+    dynasty: "",
     birthDate: "",
     deathDate: "",
     description: "",
@@ -44,7 +44,7 @@ const RoiComponent: React.FC = () => {
       <h1>Liste des Rois</h1>
       <ul>
         {rois.map((roi) => (
-          <li key={roi.id}>{roi.name} - {roi.dynastie}</li>
+          <li key={roi.id}>{roi.name} - {roi.dynasty}</li>
         ))}
       </ul>
 
@@ -59,8 +59,8 @@ const RoiComponent: React.FC = () => {
         <input
           type="text"
           placeholder="Dynastie"
-          value={newRoi.dynastie}
-          onChange={(e) => setNewRoi({ ...newRoi, dynastie: e.target.value })}
+          value={newRoi.dynasty}
+          onChange={(e) => setNewRoi({ ...newRoi, dynasty: e.target.value })}
         />
         <input
           type="text"

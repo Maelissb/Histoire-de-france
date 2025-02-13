@@ -11,7 +11,6 @@ const Menu: React.FC = () => {
            <li><Link to="/">Accueil</Link></li>
            <li><Link to="/Rois">Rois</Link></li>
           <li><Link to="/france">France</Link></li>
-          <li><Link to="/roistest">test</Link></li>
           </ul>
       </nav>
     </header>

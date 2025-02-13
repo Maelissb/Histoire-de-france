@@ -25,7 +25,7 @@ const Rois: React.FC = () => {
       description: 'Clovis Ier est le premier roi des Francs à unifier une grande partie de la Gaule. Il est connu pour avoir adopté le christianisme...',
     },
     {
-      Image: 'https://www.histoireeurope.fr/ImgC/Clotaire%20Ier_2.PNG',
+      Image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTlbNYJQrdPa98mKaRp_LQi1NAHpkkISadyWQ&s',
       name: 'Clodomir Ier (511 - 524)',
       dynasty: "Mérovingiens",
       birthDate: 'Vers 495, à Soissons, Royaume des Francs.',
@@ -97,7 +97,7 @@ const Rois: React.FC = () => {
       description: "Dagobert Ier, roi mérovingien des Francs, est souvent considéré comme le dernier grand roi de sa dynastie. Son règne est marqué par une consolidation du pouvoir royal et des réformes administratives. Connu pour sa richesse et sa piété, il fonda la basilique de Saint-Denis, où il fut enterré. Son règne fut également caractérisé par des relations diplomatiques avec d'autres royaumes et une prospérité économique.",
     },
     {
-      Image: 'https://www.histoireeurope.fr/ImgC/Clovis%20II_2.PNG',
+      Image: 'https://fr.muzeo.com/sites/default/files/styles/image_basse_def/public/oeuvres/peinture/classique/clovis_ii_roi_daustrasie_de25796.jpg?itok=mOMQ0BRo',
       name: 'Clovis II (639 - 657)',
       dynasty: "Mérovingiens",
       birthDate: 'vers 657, Royaume des Francs',
@@ -153,7 +153,7 @@ const Rois: React.FC = () => {
       description: "Clotaire IV fut proclamé roi mérovingien d'Austrasie par le maire du palais, Charles Martel, pendant une période de guerre civile. Son règne fut bref et largement symbolique, servant les intérêts de Charles Martel dans sa lutte contre la Neustrie. Clotaire IV est l'un des nombreux rois fainéants de la dynastie mérovingienne, jouant un rôle limité dans l'administration du royaume.",
     },
     {
-      Image: 'https://www.histoireeurope.fr/ImgT/Thierry%20IV_2.PNG',
+      Image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQntiL3AulFHXbKvohgVCXJ55RaFdokwHLF2g&s',
       name: 'Thierry IV (721 - 737)',
       dynasty: "Mérovingiens",
       birthDate: 'inconnue Royaume des Francs',
@@ -243,7 +243,7 @@ const Rois: React.FC = () => {
       description: "Fils de Louis II le Bègue, il récupère la couronne après Eudes. Il accorde la Normandie aux Vikings en 911 (Traité de Saint-Clair-sur-Epte).",
     },
     {
-      Image: 'https://www.histoireeurope.fr/ImgH/Henri%20Ier%20Beauclerc.PNG',
+      Image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQPUDuZwrFYqxRNVu8sCPXvp3kLCfqFti13Og&s',
       name: 'Robert Ier (922 - 923) - Capétien',
       dynasty: "Carolingiens",
       birthDate: 'né vers 860',

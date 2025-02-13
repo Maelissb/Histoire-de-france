@@ -15,9 +15,9 @@ const Card: React.FC<CardProps> = ({ image, name, dynasty, birthDate, deathDate,
   return (
     <div className="card">
       <div><img src={image} alt={name} className="card-image" /></div>
-      <div>
+      <div className='content'>
         <h2>{name}</h2>
-        <p><strong>Dynastie:</strong>{dynasty}</p>
+        <p><strong>Dynastie:</strong> {dynasty}</p>
         <p><strong>Date de naissance:</strong> {birthDate}</p>
         <p><strong>Date de décès:</strong> {deathDate}</p>
         <p><strong>Description:</strong> {description}</p>
